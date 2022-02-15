@@ -15,12 +15,12 @@ video: Chapter 2 - Part 3
  
  
  1) Write down the names of the 6 major primitive types available in C++  here:
- 
- 
- 
- 
- 
- 
+ int
+ float
+ bool
+ double
+ char
+ unsigned int
  
  
  
@@ -59,10 +59,29 @@ void variableDeclarations()
 {
     //example:
     int number = 2; //declaration of a variable named "number", that uses the primitive type 'int', and the variable's initial value is '2'
+    int parameter = 1;
+    int scale = 3;
+
+    float delayTime = 0.5f;
+    float feedback = 0.7f;
+    float inputGain = 0.1f;
+
+    double effectAmount = 1.3458;
+    double lowCutEq = -1.5;
+    double overdriveAmount= 2.5;
     
+    bool bypass = true;
+    bool toggleEffectSwitch = false;
+    bool modulateWaveShape = true;
+
+    unsigned int a = 1;
+    unsigned int b1 = 2;
+    unsigned int c = 3; 
+
+
 
     
-    ignoreUnused(number); //passing each variable declared to the ignoreUnused() function
+    ignoreUnused(number, parameter, scale, delayTime, feedback, inputGain, effectAmount, lowCutEq, overdriveAmount, bypass, toggleEffectSwitch, modulateWaveShape,a,b1, c); //passing each variable declared to the ignoreUnused() function
 }
 
 /*
@@ -77,45 +96,70 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 } 
 
 /*
- 1)
+ 1) 
  */
-
+ bool synthPreset (int presetBank = 1, int presetSelection = 5)
+{ 
+ ignoreUnused (presetBank, presetSelection); return {}; 
+ }
 /*
  2)
  */
-
+int synthMaxVolume (int volume = 1, float limiterValue = 2.5f)
+{ 
+ ignoreUnused (volume, limiterValue); return {};
+ }
 /*
  3)
  */
-
+bool chorusEffectSwitch (bool switchOn = true, bool switchOff = false)
+{ 
+ ignoreUnused (switchOn, switchOff); return {};
+ }
 /*
  4)
  */
-
+float presetSelectionMenu (bool SelectionMenuOpen = true, float preset = 1.1f)
+{ 
+ ignoreUnused (SelectionMenuOpen, preset); return {};
+ }
 /*
  5)
  */
-
+int delaySendInsert ( int delayTime = 2, int delayFeedback = 1) 
+{ 
+ ignoreUnused (delayTime, delayFeedback); return {};
+ }
 /*
  6)
  */
-
+int delayType (char delayType ='a') 
+ {ignoreUnused (delayType); return {};
+ }
 /*
  7)
  */
-
+int stereoSpread( int leftChannelSpread = 1 , float rightChannelSpread =1.5f)
+{ignoreUnused (leftChannelSpread, rightChannelSpread ); return {};
+ }
 /*
  8)
  */
-
+double oscillatorAmplitude (double oscillatorAmplitude = 0.5, float oscillilatorSpeed = 0.5f)
+{ignoreUnused (oscillatorAmplitude, oscillilatorSpeed ); return {};
+ }
 /*
  9)
  */
-
+float noteGlide (float glideAmount = 1.5, bool noteGlideOn = true)
+{ignoreUnused (glideAmount, noteGlideOn ); return {};
+ }
 /*
  10)
  */
-
+char effectProcessing (char effectType = 'a', double effectAmount =-1.5)
+{ignoreUnused (effectType, effectAmount ); return {};
+ }
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
@@ -135,28 +179,28 @@ int main()
     //example of calling that function, storing the value, and passing it to ignoreUnused at the end of main()
     auto carRented = rentACar(6, 2); 
     
-    //1)
-    
-    //2)
-    
+    //1) 
+    auto presetSelected = synthPreset (1, 5);
+    //2) 
+    auto volume = synthMaxVolume (1, 2.5);
     //3)
-    
+    auto effectSwitch = chorusEffectSwitch (true, false);
     //4)
-    
+    auto presetMenu = presetSelectionMenu (true, 1.1f);
     //5)
-    
+    auto effectInsert = delaySendInsert (2, 1);
     //6)
-    
+    auto effectSelection = delayType ('a');
     //7)
-    
+    auto stereoImage = stereoSpread (2, 1);
     //8)
-    
+    auto oscValue = oscillatorAmplitude (0.5, 0.5f);
     //9)
-    
+    auto glide = noteGlide (1.5, true);
     //10)
+    auto effectOn = effectProcessing ('a', -1.5);
     
-    
-    ignoreUnused(carRented);
+    ignoreUnused(carRented, presetSelected, volume, effectSwitch, presetMenu, effectInsert, effectSelection, stereoImage, oscValue, glide, effectOn);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
