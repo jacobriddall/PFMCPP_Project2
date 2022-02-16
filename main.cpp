@@ -102,11 +102,11 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1) 
  */
- bool synthPreset(int presetBank = 1, int presetSelection = 5)
+bool synthPreset(int presetBank = 1, int presetSelection = 5)
 { 
     ignoreUnused(presetBank, presetSelection); 
     return {}; 
- }
+}
 /*
  2)
  */
@@ -114,7 +114,7 @@ int synthMaxVolume(int volume = 1, float limiterValue = 2.5f)
 { 
     ignoreUnused(volume, limiterValue); 
     return {};
- }
+}
 /*
  3)
  */
@@ -122,7 +122,7 @@ bool chorusEffectSwitch(bool switchOn = true, bool switchOff = false)
 { 
     ignoreUnused(switchOn, switchOff); 
     return {};
- }
+}
 /*
  4)
  */
@@ -130,7 +130,7 @@ float presetSelectionMenu(bool SelectionMenuOpen = true, float preset = 1.1f)
 { 
     ignoreUnused(SelectionMenuOpen, preset); 
     return {};
- }
+}
 /*
  5)
  */
@@ -138,15 +138,15 @@ int delaySendInsert(int delayTime = 2, int delayFeedback = 1)
 { 
     ignoreUnused(delayTime, delayFeedback); 
     return {};
- }
+}
 /*
  6)
  */
 int delayType(char delayType ='a') 
- {
+{
     ignoreUnused(delayType); 
     return {};
- }
+}
 /*
  7)
  */
@@ -154,7 +154,7 @@ int stereoSpread(int leftChannelSpread = 1 , float rightChannelSpread =1.5f)
 {
     ignoreUnused(leftChannelSpread, rightChannelSpread); 
     return {};
- }
+}
 /*
  8)
  */
@@ -162,7 +162,7 @@ double oscillatorAmplitude(double oscillatorAmplitude = 0.5, float oscillilatorS
 {
     ignoreUnused(oscillatorAmplitude, oscillilatorSpeed); 
     return {};
- }
+}
 /*
  9)
  */
@@ -170,7 +170,7 @@ float noteGlide(float glideAmount = 1.5, bool noteGlideOn = true)
 {
     ignoreUnused(glideAmount, noteGlideOn); 
     return {};
- }
+}
 /*
  10)
  */
@@ -178,7 +178,7 @@ char effectProcessing(char effectType = 'a', double effectAmount =-1.5)
 {
     ignoreUnused(effectType, effectAmount); 
     return {};
- }
+}
 /*
  MAKE SURE YOU ARE NOT ON THE MASTER BRANCH
 
