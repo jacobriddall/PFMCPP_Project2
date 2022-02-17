@@ -166,17 +166,17 @@ double oscillatorAmplitude(double oscillatorAmplitude = 0.5, float oscillilatorS
 /*
  9)
  */
-float noteGlide(float glideAmount = 1.5, bool noteGlideOn = true)
+char effectPedal(char pedalSelection = 'a', bool bypassOn = true)
 {
-    ignoreUnused(glideAmount, noteGlideOn); 
+    ignoreUnused(pedalSelection, bypassOn); 
     return {};
 }
 /*
  10)
  */
-char effectProcessing(char effectType = 'a', double effectAmount =-1.5)
+int primeNumber(int number = 1, bool prime = true)
 {
-    ignoreUnused(effectType, effectAmount); 
+    ignoreUnused(number, prime); 
     return {};
 }
 /*
@@ -215,11 +215,11 @@ int main()
     //8)
     auto oscValue = oscillatorAmplitude (0.5, 0.5f);
     //9)
-    auto glide = noteGlide (1.5, true);
+    auto effectSelect = effectPedal ('a' , true);
     //10)
-    auto effectOn = effectProcessing ('a', -1.5);
+    auto naturalNumber = primeNumber (1, true);
     
-    ignoreUnused(carRented, presetSelected, volume, effectSwitch, presetMenu, effectInsert, effectSelection, stereoImage, oscValue, glide, effectOn);
+    ignoreUnused(carRented, presetSelected, volume, effectSwitch, presetMenu, effectInsert, effectSelection, stereoImage, oscValue, effectSelect, naturalNumber);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
