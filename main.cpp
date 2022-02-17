@@ -166,9 +166,9 @@ double oscillatorAmplitude(double oscillatorAmplitude = 0.5, float oscillilatorS
 /*
  9)
  */
-char effectPedal(char pedalSelection = 'a', bool bypassOn = true)
+char effectPedal(char pedalSelection = 'a', bool delaysSignal = true)
 {
-    ignoreUnused(pedalSelection, bypassOn); 
+    ignoreUnused(pedalSelection, delaysSignal); 
     return {};
 }
 /*
