@@ -102,7 +102,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1) 
  */
-bool synthPreset(int presetBank = 1, int presetSelection = 5)
+bool synthPreset(int presetBank = 1, int presetSelection = 5) FIXME: add a verb to this function name.
 { 
     ignoreUnused(presetBank, presetSelection); 
     return {}; 
@@ -110,7 +110,7 @@ bool synthPreset(int presetBank = 1, int presetSelection = 5)
 /*
  2)
  */
-int synthMaxVolume(int volume = 1, float limiterValue = 2.5f)
+int synthMaxVolume(int volume = 1, float limiterValue = 2.5f) FIXME: add a verb to this function name.
 { 
     ignoreUnused(volume, limiterValue); 
     return {};
@@ -118,7 +118,7 @@ int synthMaxVolume(int volume = 1, float limiterValue = 2.5f)
 /*
  3)
  */
-bool chorusEffectSwitch(bool switchOn = true, bool switchOff = false)
+bool chorusEffectSwitch(bool switchOn = true, bool switchOff = false) FIXME: add a verb to this function name.
 { 
     ignoreUnused(switchOn, switchOff); 
     return {};
@@ -126,7 +126,7 @@ bool chorusEffectSwitch(bool switchOn = true, bool switchOff = false)
 /*
  4)
  */
-float presetSelectionMenu(bool SelectionMenuOpen = true, float preset = 1.1f)
+float presetSelectionMenu(bool SelectionMenuOpen = true, float preset = 1.1f) FIXME: add a verb to this function name.
 { 
     ignoreUnused(SelectionMenuOpen, preset); 
     return {};
@@ -134,7 +134,7 @@ float presetSelectionMenu(bool SelectionMenuOpen = true, float preset = 1.1f)
 /*
  5)
  */
-int delaySendInsert(int delayTime = 2, int delayFeedback = 1) 
+int delaySendInsert(int delayTime = 2, int delayFeedback = 1)  FIXME: add a verb to this function name.
 { 
     ignoreUnused(delayTime, delayFeedback); 
     return {};
@@ -142,7 +142,7 @@ int delaySendInsert(int delayTime = 2, int delayFeedback = 1)
 /*
  6)
  */
-int delayType(char delayType ='a') 
+int delayType(char delayType ='a')  FIXME: add a verb to this function name.
 {
     ignoreUnused(delayType); 
     return {};
@@ -150,7 +150,7 @@ int delayType(char delayType ='a')
 /*
  7)
  */
-int stereoSpread(int leftChannelSpread = 1 , float rightChannelSpread =1.5f)
+int stereoSpread(int leftChannelSpread = 1 , float rightChannelSpread =1.5f) FIXME: add a verb to this function name.
 {
     ignoreUnused(leftChannelSpread, rightChannelSpread); 
     return {};
@@ -158,7 +158,7 @@ int stereoSpread(int leftChannelSpread = 1 , float rightChannelSpread =1.5f)
 /*
  8)
  */
-double oscillatorAmplitude(double oscillatorAmplitude = 0.5, float oscillilatorSpeed = 0.5f)
+double oscillatorAmplitude(double oscillatorAmplitude = 0.5, float oscillilatorSpeed = 0.5f) FIXME: add a verb to this function name.
 {
     ignoreUnused(oscillatorAmplitude, oscillilatorSpeed); 
     return {};
@@ -166,7 +166,7 @@ double oscillatorAmplitude(double oscillatorAmplitude = 0.5, float oscillilatorS
 /*
  9)
  */
-char effectPedal(char pedalSelection = 'a', bool delaysSignal = true)
+char effectPedal(char pedalSelection = 'a', bool delaysSignal = true) FIXME: add a verb to this function name.
 {
     ignoreUnused(pedalSelection, delaysSignal); 
     return {};
@@ -174,7 +174,7 @@ char effectPedal(char pedalSelection = 'a', bool delaysSignal = true)
 /*
  10)
  */
-int primeNumber(int number = 1, bool prime = true)
+int primeNumber(int number = 1, bool prime = true) FIXME: add a verb to this function name.
 {
     ignoreUnused(number, prime); 
     return {};
