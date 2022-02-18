@@ -102,7 +102,7 @@ bool rentACar(int rentalDuration, int carType = 0)  //function declaration with 
 /*
  1) 
  */
-bool synthPreset(int presetBank = 1, int presetSelection = 5) FIXME: add a verb to this function name.
+bool changeSynthPreset(int presetBank = 1, int presetSelection = 5) 
 { 
     ignoreUnused(presetBank, presetSelection); 
     return {}; 
@@ -110,7 +110,7 @@ bool synthPreset(int presetBank = 1, int presetSelection = 5) FIXME: add a verb 
 /*
  2)
  */
-int synthMaxVolume(int volume = 1, float limiterValue = 2.5f) FIXME: add a verb to this function name.
+int attenuateApmplifierVolume(int volume = 1, float limiterValue = 2.5f) 
 { 
     ignoreUnused(volume, limiterValue); 
     return {};
@@ -118,7 +118,7 @@ int synthMaxVolume(int volume = 1, float limiterValue = 2.5f) FIXME: add a verb 
 /*
  3)
  */
-bool chorusEffectSwitch(bool switchOn = true, bool switchOff = false) FIXME: add a verb to this function name.
+bool changeHeadphoneOutputSelect(bool switchOn = true, bool switchOff = false) 
 { 
     ignoreUnused(switchOn, switchOff); 
     return {};
@@ -126,15 +126,15 @@ bool chorusEffectSwitch(bool switchOn = true, bool switchOff = false) FIXME: add
 /*
  4)
  */
-float presetSelectionMenu(bool SelectionMenuOpen = true, float preset = 1.1f) FIXME: add a verb to this function name.
+bool letsGoToARestaurantForDinner (bool SelectionMenuOpen = true, bool hungry = false) 
 { 
-    ignoreUnused(SelectionMenuOpen, preset); 
+    ignoreUnused(SelectionMenuOpen, hungry); 
     return {};
 }
 /*
  5)
  */
-int delaySendInsert(int delayTime = 2, int delayFeedback = 1)  FIXME: add a verb to this function name.
+int delayPedalSettings(int delayTime = 2, int delayFeedback = 1)  
 { 
     ignoreUnused(delayTime, delayFeedback); 
     return {};
@@ -142,15 +142,15 @@ int delaySendInsert(int delayTime = 2, int delayFeedback = 1)  FIXME: add a verb
 /*
  6)
  */
-int delayType(char delayType ='a')  FIXME: add a verb to this function name.
+int tapeMachineIpsSpeed(char ipsSelection ='a')
 {
-    ignoreUnused(delayType); 
+    ignoreUnused(ipsSelection); 
     return {};
 }
 /*
  7)
  */
-int stereoSpread(int leftChannelSpread = 1 , float rightChannelSpread =1.5f) FIXME: add a verb to this function name.
+int deployEffectToAudio(int leftChannelSpread = 1 , float rightChannelSpread =1.5f) 
 {
     ignoreUnused(leftChannelSpread, rightChannelSpread); 
     return {};
@@ -158,7 +158,7 @@ int stereoSpread(int leftChannelSpread = 1 , float rightChannelSpread =1.5f) FIX
 /*
  8)
  */
-double oscillatorAmplitude(double oscillatorAmplitude = 0.5, float oscillilatorSpeed = 0.5f) FIXME: add a verb to this function name.
+double oscillatorChangesPitch(double oscillatorAmplitude = 0.5, float oscillilatorSpeed = 0.5f) 
 {
     ignoreUnused(oscillatorAmplitude, oscillilatorSpeed); 
     return {};
@@ -166,7 +166,7 @@ double oscillatorAmplitude(double oscillatorAmplitude = 0.5, float oscillilatorS
 /*
  9)
  */
-char effectPedal(char pedalSelection = 'a', bool delaysSignal = true) FIXME: add a verb to this function name.
+char buyADelayPedal(char pedalSelection = 'a', bool delaysSignal = true) 
 {
     ignoreUnused(pedalSelection, delaysSignal); 
     return {};
@@ -174,7 +174,7 @@ char effectPedal(char pedalSelection = 'a', bool delaysSignal = true) FIXME: add
 /*
  10)
  */
-int primeNumber(int number = 1, bool prime = true) FIXME: add a verb to this function name.
+int PrimeNumberIsNatural(int number = 1, bool prime = true)
 {
     ignoreUnused(number, prime); 
     return {};
@@ -199,25 +199,25 @@ int main()
     auto carRented = rentACar(6, 2); 
     
     //1) 
-    auto presetSelected = synthPreset (1, 5);
+    auto presetSelected = changeSynthPreset (1, 5);
     //2) 
-    auto volume = synthMaxVolume (1, 2.5);
+    auto volume = attenuateApmplifierVolume (1, 2.5);
     //3)
-    auto effectSwitch = chorusEffectSwitch (true, false);
+    auto effectSwitch = changeHeadphoneOutputSelect (true, false);
     //4)
-    auto presetMenu = presetSelectionMenu (true, 1.1f);
+    auto presetMenu = letsGoToARestaurantForDinner (true, false);
     //5)
-    auto effectInsert = delaySendInsert (2, 1);
+    auto effectInsert = delayPedalSettings (2, 1);
     //6)
-    auto effectSelection = delayType ('a');
+    auto effectSelection = tapeMachineIpsSpeed ('a');
     //7)
-    auto stereoImage = stereoSpread (2, 1);
+    auto stereoImage = deployEffectToAudio (2, 1);
     //8)
-    auto oscValue = oscillatorAmplitude (0.5, 0.5f);
+    auto oscValue = oscillatorChangesPitch (0.5, 0.5f);
     //9)
-    auto effectSelect = effectPedal ('a' , true);
+    auto effectSelect = buyADelayPedal ('a' , true);
     //10)
-    auto naturalNumber = primeNumber (1, true);
+    auto naturalNumber = PrimeNumberIsNatural (1, true);
     
     ignoreUnused(carRented, presetSelected, volume, effectSwitch, presetMenu, effectInsert, effectSelection, stereoImage, oscValue, effectSelect, naturalNumber);
     std::cout << "good to go!" << std::endl;
