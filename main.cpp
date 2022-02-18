@@ -118,7 +118,7 @@ int attenuateApmplifierVolume(int volume = 1, float limiterValue = 2.5f)
 /*
  3)
  */
-bool changeHeadphoneOutputSelect(bool switchOn = true, bool switchOff = false) 
+bool changeHeadphoneOutputRoute(bool switchOn = true, bool switchOff = false) 
 { 
     ignoreUnused(switchOn, switchOff); 
     return {};
@@ -126,7 +126,7 @@ bool changeHeadphoneOutputSelect(bool switchOn = true, bool switchOff = false)
 /*
  4)
  */
-bool letsGoToARestaurantForDinner (bool SelectionMenuOpen = true, bool hungry = false) 
+bool visitRestaurantForDinner(bool SelectionMenuOpen = true, bool hungry = false) 
 { 
     ignoreUnused(SelectionMenuOpen, hungry); 
     return {};
@@ -134,7 +134,7 @@ bool letsGoToARestaurantForDinner (bool SelectionMenuOpen = true, bool hungry = 
 /*
  5)
  */
-int delayPedalSettings(int delayTime = 2, int delayFeedback = 1)  
+int delayAudioPlayback(int delayTime = 2, int delayFeedback = 1)  
 { 
     ignoreUnused(delayTime, delayFeedback); 
     return {};
@@ -142,7 +142,7 @@ int delayPedalSettings(int delayTime = 2, int delayFeedback = 1)
 /*
  6)
  */
-int tapeMachineIpsSpeed(char ipsSelection ='a')
+int changeTapeMachineIpsSpeed(char ipsSelection ='a')
 {
     ignoreUnused(ipsSelection); 
     return {};
@@ -174,9 +174,9 @@ char buyADelayPedal(char pedalSelection = 'a', bool delaysSignal = true)
 /*
  10)
  */
-int PrimeNumberIsNatural(int number = 1, bool prime = true)
+int makeACoffee(int coffeeSelection = 1, bool caffienated = true)
 {
-    ignoreUnused(number, prime); 
+    ignoreUnused(coffeeSelection, caffienated); 
     return {};
 }
 /*
@@ -203,13 +203,13 @@ int main()
     //2) 
     auto volume = attenuateApmplifierVolume (1, 2.5);
     //3)
-    auto effectSwitch = changeHeadphoneOutputSelect (true, false);
+    auto effectSwitch = changeHeadphoneOutputRoute (true, false);
     //4)
-    auto presetMenu = letsGoToARestaurantForDinner (true, false);
+    auto presetMenu = visitRestaurantForDinner (true, false);
     //5)
-    auto effectInsert = delayPedalSettings (2, 1);
+    auto effectInsert = buyADelayPedal (2, 1);
     //6)
-    auto effectSelection = tapeMachineIpsSpeed ('a');
+    auto effectSelection = changeTapeMachineIpsSpeed ('a');
     //7)
     auto stereoImage = deployEffectToAudio (2, 1);
     //8)
@@ -217,9 +217,9 @@ int main()
     //9)
     auto effectSelect = buyADelayPedal ('a' , true);
     //10)
-    auto naturalNumber = PrimeNumberIsNatural (1, true);
+    auto timeForCoffee = makeACoffee (1, true);
     
-    ignoreUnused(carRented, presetSelected, volume, effectSwitch, presetMenu, effectInsert, effectSelection, stereoImage, oscValue, effectSelect, naturalNumber);
+    ignoreUnused(carRented, presetSelected, volume, effectSwitch, presetMenu, effectInsert, effectSelection, stereoImage, oscValue, effectSelect, timeForCoffee);
     std::cout << "good to go!" << std::endl;
     return 0;    
 }
